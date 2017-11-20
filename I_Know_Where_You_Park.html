@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>I Know Where You Park</title>
+  <meta charset="utf-8"/>
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAudBK6qnOzNXvk2HG1Xk9B6JJlOwg9vFc"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="main.css">
+
+</head>
+<body>
+<header class="container">
+  <div class="row">
+
+    <h1 class="col-sm-6" align = "TOP_LEFT">I Know Where You Park</h1>
+  </div>
+  </header>
+  <section class="jumbotron">
+    <div class="container">
+       <div class="row text-center">
+         <h2>Find Open Parking</h2>
+    <p><h4>Easy to Use</h4></p>
+  <p><h4>Saves you time</h4></p>
+  <p><h4>Leading Predictive Modelling</h4></p>
+        
+</div><!-- /content -->
+</div>
+</div>
+  </section>
+ <section class="container">
+
+ <div class="row">
+    <!--<div id="googleMap" style="width:100%;height:400px;"></div>
+
+      <script>
+      function myMap() {
+      var mapProp= {
+          center:new google.maps.LatLng(37.8716,-122.2727),
+          zoom:5,
+      };
+      var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+      }
+      </script> 
+
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6ppKCRB3EtSiL1opGXBj7xzgI6lsxu18&callback=myMap"></script> -->
+
+    <!--<input id="pac-input" class="controls" type="text" placeholder="Search Box">
+      <div id="map"></div>
+      <script>
+        function initAutocomplete() {
+          var map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 37.8716, lng: -122.2727},
+            zoom: 13,
+            mapTypeId: 'roadmap'
+          });
+
+          // Create the search box and link it to the UI element.
+          var input = document.getElementById('pac-input');
+          var searchBox = new google.maps.places.SearchBox(input);
+          map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+          // Bias the SearchBox results towards current map's viewport.
+          map.addListener('bounds_changed', function() {
+            searchBox.setBounds(map.getBounds());
+          });
+
+          var markers = [];
+          // Listen for the event fired when the user selects a prediction and retrieve
+          // more details for that place.
+          searchBox.addListener('places_changed', function() {
+            var places = searchBox.getPlaces();
+
+            if (places.length == 0) {
+              return;
+            }
+
+            // Clear out the old markers.
+            markers.forEach(function(marker) {
+              marker.setMap(null);
+            });
+            markers = [];
+
+            // For each place, get the icon, name and location.
+            var bounds = new google.maps.LatLngBounds();
+            places.forEach(function(place) {
+              if (!place.geometry) {
+                console.log("Returned place contains no geometry");
+                return;
+              }
+              var icon = {
+                url: place.icon,
+                size: new google.maps.Size(71, 71),
+                origin: new google.maps.Point(0, 0),
+                anchor: new google.maps.Point(17, 34),
+                scaledSize: new google.maps.Size(25, 25)
+              };
+
+              // Create a marker for each place.
+              markers.push(new google.maps.Marker({
+                map: map,
+                icon: icon,
+                title: place.name,
+                position: place.geometry.location
+              }));
+
+              if (place.geometry.viewport) {
+                // Only geocodes have viewport.
+                bounds.union(place.geometry.viewport);
+              } else {
+                bounds.extend(place.geometry.location);
+              }
+            });
+            map.fitBounds(bounds);
+          });
+        }
+
+      </script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6ppKCRB3EtSiL1opGXBj7xzgI6lsxu18&libraries=places&callback=initAutocomplete"
+           async defer></script>-->
+
+    <!--<section class="buttons">
+
+
+<a href="directions_page.html">Directions</a>
+<a href="test.html">Search</a>-->
+
+<form  id = 'directions'>
+<input style="width: 300px; padding: 20px; cursor: pointer; box-shadow: 6px 6px 5px; #999; -webkit-box-shadow: 6px 6px 5px #999; -moz-box-shadow: 6px 6px 5px #999; font-weight: bold; background: maroon; color: white; border-radius: 10px; border: 1px solid #999; font-size: 150%;" type="button" value="Directions" onclick="window.location.href='directions_page.html'"/>
+</form>
+
+
+<form id = 'search'> 
+<input style="width: 300px; padding: 20px; cursor: pointer; box-shadow: 6px 6px 5px; #999; -webkit-box-shadow: 6px 6px 5px #999; -moz-box-shadow: 6px 6px 5px #999; font-weight: bold; background: maroon; color: white; border-radius: 10px; border: 1px solid #999; font-size: 150%;" type="button" value="Search" onclick="window.location.href='test.html'"/>
+</form>
+
+<form  id = 'heatmap'>
+<input style="width: 300px; padding: 20px; cursor: pointer; box-shadow: 6px 6px 5px; #999; -webkit-box-shadow: 6px 6px 5px #999; -moz-box-shadow: 6px 6px 5px #999; font-weight: bold; background: maroon; color: white; border-radius: 10px; border: 1px solid #999; font-size: 150%;" type="button" value="Heat Map" onclick="window.location.href='heatmap.html'"/>
+</form>
+
+<!--</section>-->
+
+  </div><!-- /content -->
+  <div data-role="footer" data-position="fixed">
+  </div><!-- /footer -->
+</div>
+
+
+  </div>
+</section>
+  <footer class="container">
+ <div class="row">
+<p class="col-sm-4">&copy; 2017 I Know Where You Park</p>
+    <!--<ul class="col-sm-8">
+		<li class="col-sm-1"> <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/twitter.svg">.</li>
+  <li class="col-sm-1"><img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/facebook.svg"></li>
+  <li class="col-sm-1"><li class="col-sm-1">
+  <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/instagram.svg">
+</li></li>
+  <li class="col-sm-1"><li class="col-md-1">
+  <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/medium.svg">
+</li></li>
+    </ul>-->
+  </div>
+</footer>
+
+
+</body>
+</html>
